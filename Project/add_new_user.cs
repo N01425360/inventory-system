@@ -247,7 +247,15 @@ namespace Project.LogIn
         private void button3_Click_1(object sender, EventArgs e)
         {
             //Deleter function will work here
+          
+            int id;
+            id = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "delete from registration where id = "+ id +"";
+            cmd.ExecuteNonQuery();
 
+            display();
         }
     }
 }

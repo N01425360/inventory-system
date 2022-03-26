@@ -110,5 +110,30 @@ namespace Project
             SignUp signUp = new SignUp();
             signUp.Show();
         }
+
+        private void addUnitsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            manjot.unit unit = new manjot.unit();
+            unit.Show();
+
+        }
+
+        private void addProductNameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            manjot.Form1 form1 = new manjot.Form1();
+            form1.Show();
+        }
+
+        private void dealerInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dealer_info di = new dealer_info();
+            di.Show();
+        }
+
+        private void purchaseProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            purchase_master pm = new purchase_master();
+            pm.Show();
+        }
     }
 }

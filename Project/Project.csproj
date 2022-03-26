@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dealer_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dealer_info.Designer.cs">
+      <DependentUpon>dealer_info.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,16 +80,22 @@
     <Compile Include="add_new_user.Designer.cs">
       <DependentUpon>add_new_user.cs</DependentUpon>
     </Compile>
-    <Compile Include="manjot\Add _Product_Name.cs">
+    <Compile Include="Add _Product_Name.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="manjot\Add _Product_Name.Designer.cs">
+    <Compile Include="Add _Product_Name.Designer.cs">
       <DependentUpon>Add _Product_Name.cs</DependentUpon>
     </Compile>
-    <Compile Include="manjot\unit.cs">
+    <Compile Include="purchase_master.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="manjot\unit.Designer.cs">
+    <Compile Include="purchase_master.Designer.cs">
+      <DependentUpon>purchase_master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="unit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="unit.Designer.cs">
       <DependentUpon>unit.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIParent1.cs">
@@ -94,16 +106,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dealer_info.resx">
+      <DependentUpon>dealer_info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="add_new_user.resx">
       <DependentUpon>add_new_user.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="manjot\Add _Product_Name.resx">
+    <EmbeddedResource Include="Add _Product_Name.resx">
       <DependentUpon>Add _Product_Name.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="manjot\unit.resx">
+    <EmbeddedResource Include="purchase_master.resx">
+      <DependentUpon>purchase_master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="unit.resx">
       <DependentUpon>unit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
@@ -144,13 +162,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="Images\LogInIMG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

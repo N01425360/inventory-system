@@ -13,7 +13,7 @@ namespace Project.manjot
 {
     public partial class unit : Form
     {
-        SqlConnection con = new SqlConnection(@"");
+        SqlConnection con = new SqlConnection(@"Data Source=SQLSERVERDEV;Initial Catalog=Inventory;Integrated Security=True");
         public unit()
         {
             InitializeComponent();
@@ -41,7 +41,7 @@ namespace Project.manjot
 
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into unit values('" + textBox1.Text + "')";
+                cmd.CommandText = "insert into units values('" + textBox1.Text + "')";
                 cmd.ExecuteNonQuery();
                 disp();
 
@@ -70,18 +70,19 @@ namespace Project.manjot
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            dataGridView3.DataSource = dt;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             int id;
-            id=Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+            id=Convert.ToInt32(dataGridView3.SelectedCells[0].Value.ToString());
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "delete from units where id " + id + "";
+            cmd.CommandText = "delete from units where id =" + id + "";
             cmd.ExecuteNonQuery();
             disp();
         }
+
     }
 }
