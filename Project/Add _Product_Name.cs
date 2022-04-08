@@ -13,7 +13,8 @@ namespace Project.manjot
 {
     public partial class Form1 : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=SQLSERVERDEV;Initial Catalog=Inventory;Integrated Security=True");
+        //SqlConnection con = new SqlConnection(@"Data Source=SQLSERVERDEV;Initial Catalog=Inventory;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=Inventory;Integrated Security=True");
         public Form1()
         {
             InitializeComponent();

@@ -38,6 +38,7 @@ namespace Project
             this.addUnitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addProductNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.purchaseProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dealerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dealerInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
@@ -76,7 +77,7 @@ namespace Project
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.purchaseProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -105,7 +106,7 @@ namespace Project
             // addUserToolStripMenuItem
             // 
             this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addUserToolStripMenuItem.Text = "Add New User";
             this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
             // 
@@ -128,7 +129,8 @@ namespace Project
             // 
             this.productToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addProductNameToolStripMenuItem,
-            this.purchaseProductToolStripMenuItem});
+            this.purchaseProductToolStripMenuItem,
+            this.salesProductToolStripMenuItem});
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
             this.productToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.productToolStripMenuItem.Text = "Product";
@@ -139,6 +141,13 @@ namespace Project
             this.addProductNameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addProductNameToolStripMenuItem.Text = "Add Product Name";
             this.addProductNameToolStripMenuItem.Click += new System.EventHandler(this.addProductNameToolStripMenuItem_Click);
+            // 
+            // purchaseProductToolStripMenuItem
+            // 
+            this.purchaseProductToolStripMenuItem.Name = "purchaseProductToolStripMenuItem";
+            this.purchaseProductToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.purchaseProductToolStripMenuItem.Text = "Purchase Product";
+            this.purchaseProductToolStripMenuItem.Click += new System.EventHandler(this.purchaseProductToolStripMenuItem_Click);
             // 
             // dealerToolStripMenuItem
             // 
@@ -419,12 +428,12 @@ namespace Project
             this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.selectAllToolStripMenuItem.Text = "Select &All";
             // 
-            // purchaseProductToolStripMenuItem
+            // salesProductToolStripMenuItem
             // 
-            this.purchaseProductToolStripMenuItem.Name = "purchaseProductToolStripMenuItem";
-            this.purchaseProductToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.purchaseProductToolStripMenuItem.Text = "Purchase Product";
-            this.purchaseProductToolStripMenuItem.Click += new System.EventHandler(this.purchaseProductToolStripMenuItem_Click);
+            this.salesProductToolStripMenuItem.Name = "salesProductToolStripMenuItem";
+            this.salesProductToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salesProductToolStripMenuItem.Text = "Sales Product";
+            this.salesProductToolStripMenuItem.Click += new System.EventHandler(this.salesProductToolStripMenuItem_Click);
             // 
             // MDIParent1
             // 
@@ -495,6 +504,7 @@ namespace Project
         private System.Windows.Forms.ToolStripMenuItem dealerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dealerInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purchaseProductToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salesProductToolStripMenuItem;
     }
 }
 
