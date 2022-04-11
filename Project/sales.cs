@@ -13,7 +13,10 @@ namespace Project
 {
     public partial class sales : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=Inventory;Integrated Security=True");
+        //SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=Inventory;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=ROBOT\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True");
+
+
         DataTable dt = new DataTable();
         int total = 0;
         public sales()

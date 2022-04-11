@@ -15,7 +15,8 @@ namespace Project
     {
 
         // SqlConnection con = new SqlConnection(@"Data Source=SQLSERVERDEV;Initial Catalog=Inventory;Integrated Security=True");
-        SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=Inventory;Integrated Security=True");
+        //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=Inventory;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=ROBOT\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True");
         public purchase_master()
         {
             InitializeComponent();
@@ -132,5 +133,9 @@ namespace Project
             MessageBox.Show("Record Inserted Successfully");
         }
 
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
