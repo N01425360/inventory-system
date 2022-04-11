@@ -78,8 +78,10 @@ namespace Project
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -116,13 +118,13 @@ namespace Project
             this.unitsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addUnitsToolStripMenuItem});
             this.unitsToolStripMenuItem.Name = "unitsToolStripMenuItem";
-            this.unitsToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
+            this.unitsToolStripMenuItem.Size = new System.Drawing.Size(56, 26);
             this.unitsToolStripMenuItem.Text = "Units";
             // 
             // addUnitsToolStripMenuItem
             // 
             this.addUnitsToolStripMenuItem.Name = "addUnitsToolStripMenuItem";
-            this.addUnitsToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.addUnitsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.addUnitsToolStripMenuItem.Text = "Add Units";
             this.addUnitsToolStripMenuItem.Click += new System.EventHandler(this.addUnitsToolStripMenuItem_Click);
             // 
@@ -133,27 +135,27 @@ namespace Project
             this.purchaseProductToolStripMenuItem,
             this.salesProductToolStripMenuItem});
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.productToolStripMenuItem.Size = new System.Drawing.Size(74, 26);
             this.productToolStripMenuItem.Text = "Product";
             // 
             // addProductNameToolStripMenuItem
             // 
             this.addProductNameToolStripMenuItem.Name = "addProductNameToolStripMenuItem";
-            this.addProductNameToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.addProductNameToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.addProductNameToolStripMenuItem.Text = "Add Product Name";
             this.addProductNameToolStripMenuItem.Click += new System.EventHandler(this.addProductNameToolStripMenuItem_Click);
             // 
             // purchaseProductToolStripMenuItem
             // 
             this.purchaseProductToolStripMenuItem.Name = "purchaseProductToolStripMenuItem";
-            this.purchaseProductToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.purchaseProductToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.purchaseProductToolStripMenuItem.Text = "Purchase Product";
             this.purchaseProductToolStripMenuItem.Click += new System.EventHandler(this.purchaseProductToolStripMenuItem_Click);
             // 
             // salesProductToolStripMenuItem
             // 
             this.salesProductToolStripMenuItem.Name = "salesProductToolStripMenuItem";
-            this.salesProductToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
+            this.salesProductToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salesProductToolStripMenuItem.Text = "Sales Product";
             this.salesProductToolStripMenuItem.Click += new System.EventHandler(this.salesProductToolStripMenuItem_Click);
             // 
@@ -162,13 +164,13 @@ namespace Project
             this.dealerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dealerInformationToolStripMenuItem});
             this.dealerToolStripMenuItem.Name = "dealerToolStripMenuItem";
-            this.dealerToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.dealerToolStripMenuItem.Size = new System.Drawing.Size(67, 26);
             this.dealerToolStripMenuItem.Text = "Dealer";
             // 
             // dealerInformationToolStripMenuItem
             // 
             this.dealerInformationToolStripMenuItem.Name = "dealerInformationToolStripMenuItem";
-            this.dealerInformationToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.dealerInformationToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.dealerInformationToolStripMenuItem.Text = "Dealer Information";
             this.dealerInformationToolStripMenuItem.Click += new System.EventHandler(this.dealerInformationToolStripMenuItem_Click);
             // 
@@ -438,16 +440,32 @@ namespace Project
             this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.selectAllToolStripMenuItem.Text = "Select &All";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(300, 206);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 88);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // MDIParent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 558);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MDIParent1";
             this.Text = "MDIParent1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -456,6 +474,7 @@ namespace Project
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,6 +529,7 @@ namespace Project
         private System.Windows.Forms.ToolStripMenuItem dealerInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purchaseProductToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salesProductToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
