@@ -13,9 +13,9 @@ namespace Project
 {
     public partial class dealer_info : Form
     {
-        //SqlConnection con = new SqlConnection(@"Data Source=SQLSERVERDEV;Initial Catalog=Inventory;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=SQLSERVERDEV;Initial Catalog=Inventory;Integrated Security=True");
         //SqlConnection con = new SqlConnection("Data Source=(local);Initial Catalog=Inventory;Integrated Security=True");
-        SqlConnection con = new SqlConnection(@"Data Source=ROBOT\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True");
+        //SqlConnection con = new SqlConnection(@"Data Source=ROBOT\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True");
 
         public dealer_info()
         {
@@ -44,7 +44,7 @@ namespace Project
             }
             con.Open();
             dg();
-
+            button4.Visible = false;
             
         }
 
@@ -76,7 +76,9 @@ namespace Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            panel2.Visible = true;
+            panel2.Visible = false;
+            button4.Visible = true;
+            button1.Visible = false;
             int id;
             id = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString()) ;
 
@@ -90,11 +92,11 @@ namespace Project
 
             foreach(DataRow dr in dt.Rows)
             {
-                textBox6.Text = dr["dealer_name"].ToString();
-                textBox7.Text = dr["dealer_company_name"].ToString();
-                textBox8.Text = dr["contact"].ToString();
-                textBox9.Text = dr["address"].ToString();
-                textBox10.Text = dr["city"].ToString();
+                textBox1.Text = dr["dealer_name"].ToString();
+                textBox2.Text = dr["dealer_company_name"].ToString();
+                textBox3.Text = dr["contact"].ToString();
+                textBox4.Text = dr["address"].ToString();
+                textBox5.Text = dr["city"].ToString();
             }
         }
 
@@ -105,12 +107,21 @@ namespace Project
 
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update dealer_info set dealer_name = '"+ textBox6.Text +"', dealer_company_name = '"+ textBox7.Text +"', contact = '"+ textBox8.Text +"' , address = '"+ textBox9.Text +"', city = '"+ textBox10.Text +"' where id = " + id + "";
+            cmd.CommandText = "update dealer_info set dealer_name = '"+ textBox1.Text +"', dealer_company_name = '"+ textBox2.Text +"', contact = '"+ textBox3.Text +"' , address = '"+ textBox4.Text +"', city = '"+ textBox5.Text +"' where id = " + id + "";
             cmd.ExecuteNonQuery();
 
 
             panel2.Visible = false;
             dg();
+
+            button1.Visible = true;
+            button4.Visible = false;
+
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
         }
     }
 }

@@ -14,9 +14,9 @@ namespace Project
     public partial class purchase_master : Form
     {
 
-        // SqlConnection con = new SqlConnection(@"Data Source=SQLSERVERDEV;Initial Catalog=Inventory;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=SQLSERVERDEV;Initial Catalog=Inventory;Integrated Security=True");
         //SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=Inventory;Integrated Security=True");
-        SqlConnection con = new SqlConnection(@"Data Source=ROBOT\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True");
+        //SqlConnection con = new SqlConnection(@"Data Source=ROBOT\SQLEXPRESS;Initial Catalog=Inventory;Integrated Security=True");
         public purchase_master()
         {
             InitializeComponent();
@@ -131,6 +131,18 @@ namespace Project
             
 
             MessageBox.Show("Record Inserted Successfully");
+
+            comboBox1.Text = "";
+            comboBox2.Text = "";
+            comboBox3.Text = "";
+
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+
+            dateTimePicker1.ResetText();
+            dateTimePicker2.ResetText();
         }
 
         private void label10_Click(object sender, EventArgs e)

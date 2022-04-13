@@ -147,5 +147,22 @@ namespace Project
         {
 
         }
+
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stockCheckToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            stock_check sc = new stock_check();
+            sc.Show();
+        }
+
+        private void stockReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            after_purchase_report apr = new after_purchase_report();
+            apr.Show();
+        }
     }
 }

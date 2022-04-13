@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="after_purchase_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="after_purchase_report.Designer.cs">
+      <DependentUpon>after_purchase_report.cs</DependentUpon>
+    </Compile>
     <Compile Include="dealer_info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     <Compile Include="purchase_master.Designer.cs">
       <DependentUpon>purchase_master.cs</DependentUpon>
     </Compile>
+    <Compile Include="stock_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_check.Designer.cs">
+      <DependentUpon>stock_check.cs</DependentUpon>
+    </Compile>
     <Compile Include="unit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +124,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="after_purchase_report.resx">
+      <DependentUpon>after_purchase_report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dealer_info.resx">
       <DependentUpon>dealer_info.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sales.resx">
       <DependentUpon>sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock_check.resx">
+      <DependentUpon>stock_check.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="unit.resx">
       <DependentUpon>unit.cs</DependentUpon>
