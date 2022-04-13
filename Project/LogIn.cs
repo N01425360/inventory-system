@@ -23,7 +23,7 @@ namespace Project.LogIn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int i = 0;
+            int i;
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from registration where username = '"+ textBox1.Text +"' and password = '"+ textBox2.Text  +"'";
@@ -60,6 +60,11 @@ namespace Project.LogIn
         {
             textBox1.ResetText();
             textBox2.ResetText();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

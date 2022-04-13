@@ -118,6 +118,7 @@ namespace Project.LogIn
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(196, 22);
             this.textBox6.TabIndex = 11;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged_1);
             // 
             // textBox5
             // 
@@ -142,6 +143,7 @@ namespace Project.LogIn
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(196, 22);
             this.textBox3.TabIndex = 8;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
             // 
@@ -150,6 +152,7 @@ namespace Project.LogIn
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(196, 22);
             this.textBox2.TabIndex = 7;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // textBox1
             // 
@@ -158,6 +161,7 @@ namespace Project.LogIn
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(196, 22);
             this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label7
             // 
@@ -235,7 +239,7 @@ namespace Project.LogIn
             // 
             this.button3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(614, 516);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 29);
             this.button3.TabIndex = 3;

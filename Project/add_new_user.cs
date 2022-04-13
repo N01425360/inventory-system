@@ -35,32 +35,7 @@ namespace Project.LogIn
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (textBox2.Text.All(chr => char.IsLetter(chr))) //It will checking if user enter is chr or not
-                {
-                    oldText = textBox2.Text;
-                    textBox2.Text = oldText;
-
-                    textBox2.BackColor = System.Drawing.Color.White;
-                    textBox2.ForeColor = System.Drawing.Color.Black;
-                }
-                else
-                {
-                    textBox2.Text = oldText;
-                    textBox2.BackColor = System.Drawing.Color.Red;
-                    textBox2.ForeColor = System.Drawing.Color.White;
-                    MessageBox.Show("Error! Only Enter characters ");  //error message
-                }
-                textBox2.SelectionStart = textBox2.Text.Length;
-            }
-
-
-
-            catch (InvalidOperationException)
-            {
-                MessageBox.Show("Error! invalid operation");
-            }
+            
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -98,32 +73,7 @@ namespace Project.LogIn
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (textBox1.Text.All(chr => char.IsLetter(chr))) //It will checking if user enter is chr or not
-                {
-                    oldText = textBox1.Text;
-                    textBox1.Text = oldText;
-
-                    textBox1.BackColor = System.Drawing.Color.White;
-                    textBox1.ForeColor = System.Drawing.Color.Black;
-                }
-                else
-                {
-                    textBox1.Text = oldText;
-                    textBox1.BackColor = System.Drawing.Color.Red;
-                    textBox1.ForeColor = System.Drawing.Color.White;
-                    MessageBox.Show("Error! Only Enter characters ");  //error message
-                }
-                textBox1.SelectionStart = textBox1.Text.Length;
-            }
-
-
-
-            catch (InvalidOperationException)
-            {
-                MessageBox.Show("Error! invalid operation");
-            }
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -143,30 +93,7 @@ namespace Project.LogIn
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            try //try catch block for any exception in text field
-            {
-                if (textBox6.Text.All(chr => char.IsDigit(chr))) //It will checking if user enter is digit or not
-                {
-                    oldText = textBox6.Text;
-                    textBox6.Text = oldText;
-
-                    textBox6.BackColor = System.Drawing.Color.White;
-                    textBox6.ForeColor = System.Drawing.Color.Black;
-                }
-                else
-                {
-                    textBox6.Text = oldText;
-                    textBox6.BackColor = System.Drawing.Color.Red;
-                    textBox6.ForeColor = System.Drawing.Color.White;
-                    MessageBox.Show("Error! Only Enter Numeric value ");    //error message
-                }
-                textBox6.SelectionStart = textBox6.Text.Length;
-            }
-
-            catch (InvalidOperationException)
-            {
-                MessageBox.Show("Error! invalid operation");
-            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -176,7 +103,7 @@ namespace Project.LogIn
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int id;
+            
             MessageBox.Show(dataGridView1.SelectedCells[0].Value.ToString());
         }
 
@@ -259,6 +186,76 @@ namespace Project.LogIn
             cmd.ExecuteNonQuery();
 
             display();
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textBox1.Text.All(chr => char.IsLetter(chr))) //It will checking if user enter is chr or not
+                {
+                    oldText = textBox1.Text;
+                    textBox1.Text = oldText;
+
+                    textBox1.BackColor = System.Drawing.Color.White;
+                    textBox1.ForeColor = System.Drawing.Color.Black;
+                }
+                else
+                {
+                    textBox1.Text = oldText;
+                    textBox1.BackColor = System.Drawing.Color.Red;
+                    textBox1.ForeColor = System.Drawing.Color.White;
+                    MessageBox.Show("Error! Only Enter characters ");  //error message
+                }
+                textBox1.SelectionStart = textBox1.Text.Length;
+            }
+
+
+
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Error! invalid operation");
+            }
+        }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textBox2.Text.All(chr => char.IsLetter(chr))) //It will checking if user enter is chr or not
+                {
+                    oldText = textBox2.Text;
+                    textBox2.Text = oldText;
+
+                    textBox2.BackColor = System.Drawing.Color.White;
+                    textBox2.ForeColor = System.Drawing.Color.Black;
+                }
+                else
+                {
+                    textBox2.Text = oldText;
+                    textBox2.BackColor = System.Drawing.Color.Red;
+                    textBox2.ForeColor = System.Drawing.Color.White;
+                    MessageBox.Show("Error! Only Enter characters ");  //error message
+                }
+                textBox2.SelectionStart = textBox2.Text.Length;
+            }
+
+
+
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Error! invalid operation");
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox6_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
